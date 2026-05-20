@@ -38,4 +38,9 @@ function longestString(arr){
     return longestStr;
 }
 
+console.log(`\nTake an array of strings and return the longest string`);
+Array2 = ["Patagonias","Argentina", "Paraguay", "Chile", "Brazil"]; //array of strings to be compared for longest string
+console.log(`The longest string in:`);
+console.log(Array2)
+console.log(`is ${longestString(Array2)}`)
 
