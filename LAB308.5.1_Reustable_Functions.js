@@ -49,3 +49,7 @@ function stringsLongerThan(arr, length){
   //return a filted array       //condtion to be included in the filtered array 
   return arr.filter( (element)=> element.length>length );
 }
+
+console.log(`\nTake an array of strings, #, and return strings longer than the given number`)
+console.log(`Strings longer than 7 characters, our new array is: `)
+console.log(stringsLongerThan(Array2, 7)); // printing results of functions 
