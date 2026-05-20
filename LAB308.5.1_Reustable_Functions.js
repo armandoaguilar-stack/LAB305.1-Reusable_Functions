@@ -33,14 +33,14 @@ function longestString(arr){
    //iterating through all array values in data set to compare length of each element to longestStr and replace if longer
     for (let element of arr){
       if(element.length>longestStr)  //if current array value is longer, repalce longestStr with current element
-        longestStr = element;
+        longestStr = element; //replace longestStr with current element if it is longer
     }
-    return longestStr;
+    return longestStr; //return longest string after iterating through all elements in array
 }
 
 console.log(`\nTake an array of strings and return the longest string`);
 Array2 = ["Patagonias","Argentina", "Paraguay", "Chile", "Brazil"]; //array of strings to be compared for longest string
-console.log(`The longest string in:`);
+console.log(`Longest string:`);
 console.log(Array2)
 console.log(`is ${longestString(Array2)}`)
 
@@ -66,7 +66,7 @@ console.log(stringsLongerThan(Array2, 7));
 
 
 console.log(`\nTake a number, n, and print every number between 1 and n` )
-function printNums(endNumber, currentNumber=1){ //default second paramter set to 1, bc we want to start counting up from 1
+function printNumbers(endNumber, currentNumber=1){ //default second paramter set to 1, bc we want to start counting up from 1
 
     //base case when we reach end num, just print it
     if(currentNumber===endNumber){
@@ -75,10 +75,10 @@ function printNums(endNumber, currentNumber=1){ //default second paramter set to
     }
     //recursive call, print out current number then call it again with currentnumer +1 to replace the default of 1 to do the counting up
     console.log(currentNumber)
-    return printNums (endNumber,currentNumber+1);
+    return printNumbers (endNumber,currentNumber+1);
        
 }
-printNums(20); // Prints all #s between 1 and 20, inclusive. 
+printNumbers(20); // Prints all #s between 1 and 20, inclusive. 
 console.log() // Takes a #, n, and prints every # btwn 1 and n(20) in order.
 
 console.log(`Part 2: Thinking Methodically`)
@@ -89,3 +89,16 @@ let data = [
  { id: "63", name: "Blaine", occupation: "Quiz Master", age: "58" },
  { id: "7", name: "Bilbo", occupation: "None", age: "111" }
 ];
+
+//Convertthe Age property into # for easier usage with .sort() function. 
+data = data.map( // usage of .map function to go through ea/element in array and modify f(x)s provided.
+ 
+  //arrow f(x) converts each age value into #. Give back/return modified dataObject back into array
+  (dataObject)=> { 
+    dataObject.age = Number(dataObject.age)
+    return dataObject
+  }
+);
+
+console.log(`Beginning Table: `)
+console.table(data)
