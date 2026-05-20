@@ -44,3 +44,8 @@ console.log(`The longest string in:`);
 console.log(Array2)
 console.log(`is ${longestString(Array2)}`)
 
+// Array of strings, and #, return strings that are longer than the given #. 
+function stringsLongerThan(arr, length){
+  //return a filted array       //condtion to be included in the filtered array 
+  return arr.filter( (element)=> element.length>length );
+}
