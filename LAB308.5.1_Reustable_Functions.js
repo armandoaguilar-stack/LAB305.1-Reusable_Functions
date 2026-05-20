@@ -82,7 +82,7 @@ printNumbers(20); // Prints all #s between 1 and 20, inclusive.
 console.log() // Takes a #, n, and prints every # btwn 1 and n(20) in order.
 
 console.log(`Part 2: Thinking Methodically`)
-let data = [
+let data1 = [
   { id: "42", name: "Bruce", occupation: "Knight", age: "41" },
  { id: "48", name: "Barry", occupation: "Runner", age: "25" },
  { id: "57", name: "Bob", occupation: "Fry Cook", age: "19" },
@@ -90,8 +90,8 @@ let data = [
  { id: "7", name: "Bilbo", occupation: "None", age: "111" }
 ];
 
-//Convertthe Age property into # for easier usage with .sort() function. 
-data = data.map( // usage of .map function to go through ea/element in array and modify f(x)s provided.
+//Convert the Age property into # for easier usage with .sort() function. 
+data2 = data1.map( // usage of .map function to go through ea/element in array and modify f(x)s provided.
  
   //arrow f(x) converts each age value into #. Give back/return modified dataObject back into array
   (dataObject)=> { 
@@ -101,4 +101,11 @@ data = data.map( // usage of .map function to go through ea/element in array and
 );
 
 console.log(`Beginning Table: `)
-console.table(data)
+console.table(data1)
+
+//Sort data Array by age 
+data1.sort((a,b)=>  b.age-a.age); //Age sorting, descending order. 
+
+
+console.log(`\nSorted by Age Descending Category: `);
+console.table(data1);
