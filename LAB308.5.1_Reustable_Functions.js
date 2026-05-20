@@ -24,3 +24,8 @@ function avgArray(arr){
 console.log(`\nTake an array of numbers and return the average:`);
 console.log(array1);
 console.log(`The avg of that array is ` + avgArray(array1)); // call avg f(x) and print results
+
+//Take an array of strings and return the longest string available 
+function longestString(arr){
+   let longestStr = "";//varibale to keep track of longest elements available   
+
