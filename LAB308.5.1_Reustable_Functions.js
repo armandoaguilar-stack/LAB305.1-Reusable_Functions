@@ -29,3 +29,13 @@ console.log(`The avg of that array is ` + avgArray(array1)); // call avg f(x) an
 function longestString(arr){
    let longestStr = "";//varibale to keep track of longest elements available   
 
+
+   //iterating through all array values in data set to compare length of each element to longestStr and replace if longer
+    for (let element of arr){
+      if(element.length>longestStr)  //if current array value is longer, repalce longestStr with current element
+        longestStr = element;
+    }
+    return longestStr;
+}
+
+
