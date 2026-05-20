@@ -126,3 +126,7 @@ data2 = data2.map( (dataObject)=>{
 );
 console.log(`\nChanges “occupation” propety to “job” and age increases by 1`);
 console.table(data2);
+
+//Reduce method, calculating sum of the ages and finding avg of ages in data array.
+let avgAge = data2.reduce((accumulator ,currentObject)=>{return accumulator+currentObject.age},0)/data2.length;
+console.log(`\nAvg age array people is ${avgAge.toFixed(2)} years`);
