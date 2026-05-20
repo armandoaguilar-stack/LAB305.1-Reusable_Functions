@@ -109,3 +109,20 @@ data1.sort((a,b)=>  b.age-a.age); //Age sorting, descending order.
 
 console.log(`\nSorted by Age Descending Category: `);
 console.table(data1);
+
+//Removing entries age > 50 yrs age.
+console.log(`\nNo Ages > 50: `);
+data2 = data1.filter((dataObject)=> dataObject.age<50); //Creates a filter, allows only < 50 yrs age
+console.table(data2);
+
+
+//Maps data array, modifies “occupation” to “job”, +1 age increment.
+data2 = data2.map( (dataObject)=>{
+  dataObject["job"]= dataObject["occupation"]//Property job = value occupation
+  delete dataObject['occupation']//removes duplicate property occupation
+  dataObject.age = dataObject.age+1 //+1 to age value 
+  return dataObject //return modifed age and new job property back into array
+}
+);
+console.log(`\nChanges “occupation” propety to “job” and age increases by 1`);
+console.table(data2);
