@@ -129,4 +129,27 @@ console.table(data2);
 
 //Reduce method, calculating sum of the ages and finding avg of ages in data array.
 let avgAge = data2.reduce((accumulator ,currentObject)=>{return accumulator+currentObject.age},0)/data2.length;
-console.log(`\nAvg age array people is ${avgAge.toFixed(2)} years`);
+console.log(`\nAvg age array people is ${avgAge.toFixed(2)} years`); // prints average age of people in data array, to 2 decimal places.
+
+
+console.log('\nPart 3: Thinking Critically');
+
+
+// Use object and increment age field+1
+function increaseAge(object){ 
+  object.age = object.age+1;
+  object['updated_at'] = new Date();  //Ref is passed from original object as a paramter. Object is accessed directly and modified 
+}
+
+//Object Age+1 (gives a copy to be assigned or reassigned into a varibale to avoid modifying original object)
+function increaseAge(object){
+   let copy = object;   //Copy assignment gives value of the orignal object.
+  copy['updated_at'] = new Date();
+  copy.age = object.age+1;  
+  return copy //return modified copy of object, original object is not modified.
+}
+
+
+let origialObj = {name: "ArmandoAguilar", age:0};
+console.log(`\nOriginal Object Class:`)
+console.log(origialObj);
